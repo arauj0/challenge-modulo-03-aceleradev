@@ -21,18 +21,12 @@ const fibonacci = () => {
 const isFibonnaci = (num) => {
     const sequence = fibonacci();
 
-    const is = sequence.find(number => number === num);
+    const is = sequence.find(number => number == num);
 
-    if (!is) return false
+    if (typeof is == 'undefined') return false
 
     return true;
 }
-
-// const result = fibonacci();
-// console.log(result);
-
-// const result2 = isFibonnaci(0);
-// console.log(result2);
 
 module.exports = {
     fibonacci,
